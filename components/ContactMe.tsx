@@ -1,6 +1,6 @@
 import React from "react";
-import { AiOutlinePhone, AiOutlineMail } from "react-icons/Ai";
-import { FaAddressCard } from "react-icons/Fa";
+//import { AiOutlinePhone, AiOutlineMail } from "react-icons/Ai";
+import { FaAddressCard, FaPhone, FaMailBulk } from "react-icons/Fa";
 import { useForm, SubmitHandler } from "react-hook-form";
 type Inputs = {
   name: string;
@@ -26,10 +26,7 @@ function ContactMe({}: Inputs) {
         </h4>
         <div className="space-y-10">
           <div className="flex items-center space-x-5 justify-center">
-            <AiOutlinePhone
-              color="#F7AB0A"
-              className="text-4xl text-gray-500"
-            />
+            <FaPhone color="#F7AB0A" className="text-4xl text-gray-500" />
             <p className="text-2xl">+94719034913</p>
           </div>
           <div className="flex items-center space-x-5 justify-center">
@@ -37,7 +34,7 @@ function ContactMe({}: Inputs) {
             <p className="text-2xl">Not in exact location,Kurunegala</p>
           </div>
           <div className="flex items-center space-x-5 justify-center">
-            <AiOutlineMail color="#F7AB0A" className="text-4xl text-gray-500" />
+            <FaMailBulk color="#F7AB0A" className="text-4xl text-gray-500" />
             <p className="text-2xl">tharakahalkewelatecs@gmail.com</p>
           </div>
         </div>
