@@ -2,10 +2,18 @@ import React from "react";
 import { motion } from "framer-motion";
 import ExperianceCard from "./ExperianceCard";
 
-type Props = {};
+type Experiance = {
+  id: number;
+  companyUrl: string;
+  technologies: [];
+  workedon: [];
+  role: string;
+  time: string;
+  company: string;
+};
 
-function WorkExperiance({}: Props) {
-  const [experiance, setExperiance] = React.useState([]);
+function WorkExperiance({}: Experiance) {
+  const [experiance, setExperiance] = React.useState<Experiance[]>([]);
   React.useEffect(() => {
     fetch("https://63ecb6f8be929df00cb091c5.mockapi.io/experiance")
       .then((res) => res.json())
@@ -23,21 +31,16 @@ function WorkExperiance({}: Props) {
       </h3>
       <div className="w-full overflow-visible  justify-center flex-col md:flex-row lg:flex-row xl:flex-row md:mt-0 lg:mt-0 xl:mt-0 mt-20 scrollbar-track-rounded-lg scrollbar-thin  md:scrollbar-track-gray-400/20  md:scrollbar-thumb-yellow-500  flex space-x-5  overflow-x-scroll snap-x snap-mandatory">
         {experiance.length != 0
-          ? experiance.map(
-              (experiance) => (
-                console.log(experiance.technologies),
-                (
-                  <ExperianceCard
-                    companyImage={experiance.companyUrl}
-                    technologies={experiance.technologies}
-                    tasks={experiance.workedon}
-                    role={experiance.role}
-                    duration={experiance.time}
-                    company={""}
-                  />
-                )
-              )
-            )
+          ? experiance.map((experiance) => (
+              <ExperianceCard
+                companyImage={experiance.companyUrl}
+                technologies={experiance.technologies}
+                tasks={experiance.workedon}
+                role={experiance.role}
+                duration={experiance.time}
+                company={""}
+              />
+            ))
           : null}
 
         {/* experianceCard */}

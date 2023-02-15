@@ -32,19 +32,27 @@ export default function Home() {
 
       {/* Experiance */}
       <section id="experiance">
-        <WorkExperiance />
+        <WorkExperiance
+          id={0}
+          companyUrl={""}
+          technologies={[]}
+          workedon={[]}
+          role={""}
+          time={""}
+          company={""}
+        />
       </section>
       {/* Skills  */}
       <section id="skills">
-        <Skills />
+        <Skills url={""} percentage={""} />
       </section>
       {/* Projects */}
       <section id="projects">
-        <Projects />
+        <Projects image={""} name={""} description={""} link={""} />
       </section>
       {/* contact me */}
       <section id="contact">
-        <ContactMe />
+        <ContactMe name={""} email={""} message={""} subject={""} />
       </section>
       <Link href="#hero">
         <footer className="sticky bottom-5 w-full cursor-pointer ">

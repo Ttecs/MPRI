@@ -2,10 +2,13 @@ import React from "react";
 import { motion } from "framer-motion";
 import Skill from "./Skill";
 
-type Props = {};
+type Data = {
+  url: string;
+  percentage: string;
+};
 
-function Skills({}: Props) {
-  const [skills, setSkills] = React.useState([]);
+function Skills({}: Data) {
+  const [skills, setSkills] = React.useState<Data[]>([]);
   //fetch data from https://63ecb6f8be929df00cb091c5.mockapi.io/technologies
   React.useEffect(() => {
     fetch("https://63ecb6f8be929df00cb091c5.mockapi.io/technologies")

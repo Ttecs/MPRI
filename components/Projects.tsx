@@ -1,10 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-type Props = {};
+type Data = {
+  image: string;
+  name: string;
+  description: string;
+  link: string;
+};
 
-function Projects({}: Props) {
-  const [projects, setProjects] = React.useState([]);
+function Projects({}: Data) {
+  const [projects, setProjects] = React.useState<Data[]>([]);
   //fetch data from https://63ecb6f8be929df00cb091c5.mockapi.io/projects
   React.useEffect(() => {
     fetch("https://63ece9f9be929df00cb50371.mockapi.io/projects")

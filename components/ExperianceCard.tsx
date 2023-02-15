@@ -3,12 +3,16 @@ import { motion } from "framer-motion";
 import { SocialIcon } from "react-social-icons";
 import { DiReact, DiFirebase } from "react-icons/di";
 type Props = {
-  technologies: [];
+  technologies: Tech[];
+  tasks: Tech[];
   company: string;
   duration: string;
   role: string;
-  tasks: [];
   companyImage: string;
+};
+type Tech = {
+  URL: string;
+  task: string;
 };
 
 function ExperianceCard({
