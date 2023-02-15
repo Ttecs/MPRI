@@ -29,7 +29,7 @@ function WorkExperiance({}: Experiance) {
       <h3 className="absolute uppercase tracking-[20px] text-gray-500 text-2xl top-0">
         Experiance
       </h3>
-      <div className="w-full overflow-visible  justify-center flex-col md:flex-row lg:flex-row xl:flex-row md:mt-0 lg:mt-0 xl:mt-0 mt-20 scrollbar-track-rounded-lg scrollbar-thin  md:scrollbar-track-gray-400/20  md:scrollbar-thumb-yellow-500  flex space-x-5  overflow-x-scroll snap-x snap-mandatory">
+      <div className="w-full  overflow-visible  justify-center flex-col md:flex-row lg:flex-row xl:flex-row md:mt-0 lg:mt-0 xl:mt-0 mt-24 scrollbar-track-rounded-lg scrollbar-thin  md:scrollbar-track-gray-400/20  md:scrollbar-thumb-yellow-500  flex md:space-x-5 lg:space-x-5 xl:space-x-5 overflow-x-scroll snap-x snap-mandatory">
         {experiance.length != 0
           ? experiance.map((experiance) => (
               <ExperianceCard

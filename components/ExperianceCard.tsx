@@ -24,7 +24,7 @@ function ExperianceCard({
   companyImage,
 }: Props) {
   return (
-    <article className="bg-[#292929] cursor-pointer transition-opacity overflow-hidden duration-200 opacity-80 p-10 hover:opacity-100 snap-center flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[300px]  mt-10 md:w-[500px] xl:w-[500px]">
+    <article className="bg-[#292929]  cursor-pointer transition-opacity overflow-hidden duration-200 opacity-80 p-10 hover:opacity-100 snap-center flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[300px]  mt-5 md:w-[500px] xl:w-[500px]">
       <motion.img
         initial={{ opacity: 0, y: -100 }}
         whileInView={{ opacity: 1, y: 0 }}
